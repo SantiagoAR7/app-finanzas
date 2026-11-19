@@ -1,6 +1,12 @@
 # App Finanzas
 
+[![CI](https://github.com/SantiagoAR7/app-finanzas/actions/workflows/ci.yml/badge.svg)](https://github.com/SantiagoAR7/app-finanzas/actions/workflows/ci.yml)
+
 App privada de finanzas personales para uso propio, familiares y amigos. Esta construida con Expo, React Native, Expo Router y Supabase.
+
+## Enfoque del proyecto
+
+Este repositorio muestra una app movil completa construida con una arquitectura realista para datos privados: autenticacion, base de datos con politicas RLS, bloqueo local, reportes, ahorro por metas, recurrentes y documentacion de despliegue. La app no usa datos bancarios ni contiene credenciales reales en el repositorio.
 
 ## Que tiene hoy
 
@@ -89,10 +95,13 @@ El telefono y el computador deben estar en la misma red Wi-Fi. Si el QR no conec
 - El PIN local protege el acceso en el telefono, pero no reemplaza el login ni las reglas de Supabase.
 - El PIN se guarda como hash con salt usando almacenamiento seguro/local.
 - La app no se conecta a bancos. Solo guarda la informacion que cada persona ingresa manualmente.
+- `.env` esta ignorado y solo se publica `.env.example` con placeholders.
+- La service role key de Supabase nunca debe usarse en la app movil.
 
 ## Documentos utiles
 
 - Guia de despliegue movil: `docs/mobile-deployment.md`
+- Politica de seguridad: `SECURITY.md`
 - SQL de Supabase: `supabase/schema.sql`
 
 ## Siguiente endurecimiento recomendado
