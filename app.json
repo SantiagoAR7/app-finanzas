@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "appfinanzas",
     "userInterfaceStyle": "light",
     "plugins": [
       [
@@ -19,17 +20,26 @@
           "configureAndroidBackup": true,
           "faceIDPermission": "Permite que App Finanzas use Face ID para proteger tu informacion financiera."
         }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#F7FBFA"
+        }
       ]
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.personal.appfinanzas",
+      "bundleIdentifier": "com.santiagoar7.appfinanzas",
       "config": {
         "usesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.personal.appfinanzas",
+      "package": "com.santiagoar7.appfinanzas",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",

@@ -60,6 +60,13 @@ npx eas-cli@latest build:configure
 npx eas-cli@latest build --platform android --profile preview
 ```
 
+En este proyecto tambien estan los scripts ya preparados para evitar problemas con la cache global de npm:
+
+```sh
+npm run eas:login
+npm run build:android:preview
+```
+
 El resultado recomendado para compartir por fuera de Play Store es un APK interno. Para publicar en Play Store se usa AAB.
 
 ## iPhone instalable
@@ -81,6 +88,13 @@ npx eas-cli@latest login
 npx eas-cli@latest build --platform ios --profile preview
 ```
 
+O usando los scripts del proyecto:
+
+```sh
+npm run eas:login
+npm run build:ios:preview
+```
+
 Luego se sube a App Store Connect/TestFlight con EAS Submit o manualmente.
 
 ### Opcion C: App Store no listada
@@ -94,18 +108,12 @@ En `app.json`:
 ```json
 {
   "ios": {
-    "bundleIdentifier": "com.personal.appfinanzas"
+    "bundleIdentifier": "com.santiagoar7.appfinanzas"
   },
   "android": {
-    "package": "com.personal.appfinanzas"
+    "package": "com.santiagoar7.appfinanzas"
   }
 }
-```
-
-Antes del build final conviene decidir si ese identificador queda asi o si usamos uno mas personal, por ejemplo:
-
-```text
-com.santiago.appfinanzas
 ```
 
 Cambiarlo despues de publicar builds puede complicar actualizaciones.
