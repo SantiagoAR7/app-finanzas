@@ -1,15 +1,35 @@
 {
   "expo": {
-    "name": "app-finanzas",
+    "name": "App Finanzas",
     "slug": "app-finanzas",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permite que App Finanzas use Face ID para proteger el acceso a tu informacion financiera."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Permite que App Finanzas use Face ID para proteger tu informacion financiera."
+        }
+      ]
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.personal.appfinanzas",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.personal.appfinanzas",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
